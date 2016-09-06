@@ -10,10 +10,9 @@ RUN apt-get -y update  \
 
 RUN gem source -r https://rubygems.org/ \
     && gem source -a https://gems.ruby-china.org \
-    && gem install jeklly \
-    && bundle config mirror.https://rubygems.org https://gems.ruby-china.org
+    && gem install jekyll jekyll-paginate redcarpet kramdown  rouge jekyll-watch
 
-WORKDIR /opt/jeklly-site
+WORKDIR /opt/jekyll-site
 
 # RUN bunlder to install gem packages
 
