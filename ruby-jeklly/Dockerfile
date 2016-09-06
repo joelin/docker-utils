@@ -12,8 +12,8 @@ RUN gem source -r https://rubygems.org/ \
     && gem source -a https://gems.ruby-china.org \
     && gem install jekyll jekyll-paginate redcarpet kramdown  rouge jekyll-watch
 
-WORKDIR /opt/jekyll-site
+WORKDIR /opt/site-src
 
 # RUN bunlder to install gem packages
 
-ENTRYPOINT jekyll build -s .
+CMD jekyll build -s . -d /opt/site
