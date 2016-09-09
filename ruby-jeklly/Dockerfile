@@ -12,6 +12,8 @@ RUN gem source -r https://rubygems.org/ \
     && gem source -a https://gems.ruby-china.org \
     && gem install jekyll jekyll-paginate redcarpet kramdown  rouge jekyll-watch
 
+#&& bundle config mirror.https://rubygems.org https://gems.ruby-china.org
+
 WORKDIR /opt/site-src
 
 # RUN bunlder to install gem packages
